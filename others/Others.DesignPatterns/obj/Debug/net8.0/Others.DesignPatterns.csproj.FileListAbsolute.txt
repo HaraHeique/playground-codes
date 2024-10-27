@@ -1,0 +1,15 @@
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\bin\Debug\net8.0\Others.DesignPatterns.exe
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\bin\Debug\net8.0\Others.DesignPatterns.deps.json
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\bin\Debug\net8.0\Others.DesignPatterns.runtimeconfig.json
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\bin\Debug\net8.0\Others.DesignPatterns.dll
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\bin\Debug\net8.0\Others.DesignPatterns.pdb
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.GeneratedMSBuildEditorConfig.editorconfig
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.AssemblyInfoInputs.cache
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.AssemblyInfo.cs
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.csproj.CoreCompileInputs.cache
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.sourcelink.json
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.dll
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\refint\Others.DesignPatterns.dll
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.pdb
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.genruntimeconfig.cache
+D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\ref\Others.DesignPatterns.dll
