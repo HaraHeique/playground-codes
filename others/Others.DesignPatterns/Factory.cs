@@ -35,6 +35,7 @@ enum ShapeTypes
 }
 
 // The absctration generalization of the method factories
+// This is also called the factory of factories (The abstract factory itself)
 abstract class ShapeFactory 
 {
     public static ShapeFactory Create(ShapeTypes type) => 
