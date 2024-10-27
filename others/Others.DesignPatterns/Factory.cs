@@ -26,19 +26,24 @@ public class CircleFilled : Shape {}
 public class SquareFilled : Shape {}
 public class RectangleFilled : Shape {}
 
-// Types of possible shapes 
-enum ShapeTypes 
+// The absctration generalization of the method factories
+// This is also called the factory of factories (The abstract factory itself) 
+enum ShapeFormsTypes 
 {
     Regular,
     Rounded,
     Filled
 }
 
-// The absctration generalization of the method factories
-// This is also called the factory of factories (The abstract factory itself)
 abstract class ShapeFactory 
 {
-    public static ShapeFactory Create(ShapeTypes type) => 
+    /// <summary>
+    /// Create the concrete factory method passing the identifier options as argument
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentException"></exception>
+    public static ShapeFactory Create(ShapeFormsTypes type) => 
         type switch
         {
             type.Regular => new RegularShapeFactory(),
@@ -47,19 +52,37 @@ abstract class ShapeFactory
             _ => throw new ArgumentException("Invalid enum value for type factory choosen", nameof(type))
         }; 
 
+    /// <summary>
+    /// Create the concrete object passing the identifier option as argument.
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentException"></exception>
+    public Shape CreateForm(ShapeTypes type) =>
+        type switch
+        {
+            type.Circle => Circle(),
+            type.Square => Square(),
+            type.Rectangle => Rectangle(),
+            _ => throw new ArgumentException("Invalid enum value for type concreate object choosen", nameof(type))
+        }; 
+
     abstract Shape Circle();
     abstract Shape Square();
     abstract Shape Rectangle();
 }
 
 // Factory Methods for each group of related concrete objects
+enum ShapeTypes 
+{
+    Circle,
+    Square,
+    Rectangle
+}
+
 class RegularShapeFactory : ShapeFactory
 {
-    Shape Circle() 
-    {
-        return new CircleRegular();
-    }
-    
+    Shape Circle() =>  new CircleRegular();
     Shape Square() => new SquareRegular();
     Shape Rectangle() => new RectangleRegular();
 }
