@@ -13,3 +13,11 @@ D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\n
 D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.pdb
 D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.genruntimeconfig.cache
 D:\HaraHeique\Projetos\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\ref\Others.DesignPatterns.dll
+C:\Users\heika\OneDrive\Documentos\Software\Projects\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heika\OneDrive\Documentos\Software\Projects\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.AssemblyInfoInputs.cache
+C:\Users\heika\OneDrive\Documentos\Software\Projects\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.AssemblyInfo.cs
+C:\Users\heika\OneDrive\Documentos\Software\Projects\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.csproj.CoreCompileInputs.cache
+C:\Users\heika\OneDrive\Documentos\Software\Projects\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.sourcelink.json
+C:\Users\heika\OneDrive\Documentos\Software\Projects\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.dll
+C:\Users\heika\OneDrive\Documentos\Software\Projects\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\refint\Others.DesignPatterns.dll
+C:\Users\heika\OneDrive\Documentos\Software\Projects\playground-codes\others\Others.DesignPatterns\obj\Debug\net8.0\Others.DesignPatterns.pdb

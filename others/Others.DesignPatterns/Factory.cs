@@ -6,8 +6,10 @@
 //     FILLED FACTORY:
 //         - CIRCLE, SQUARE, RECTANGLE
 
+namespace Others.DesignPatterns;
+
 // Generic and abstract Shape interface. Common abstract object to all concrete object
-public abstract class Shape 
+public abstract class Shape
 {
     public double Height { get; set; }
     public double Width { get; set; }
@@ -46,9 +48,9 @@ abstract class ShapeFactory
     public static ShapeFactory Create(ShapeFormsTypes type) => 
         type switch
         {
-            type.Regular => new RegularShapeFactory(),
-            type.Rounded => new RoundedShapeFactory(),
-            type.Filled => new FilledShapeFactory(),
+            ShapeFormsTypes.Regular => new RegularShapeFactory(),
+            ShapeFormsTypes.Rounded => new RoundedShapeFactory(),
+            ShapeFormsTypes.Filled => new FilledShapeFactory(),
             _ => throw new ArgumentException("Invalid enum value for type factory choosen", nameof(type))
         }; 
 
@@ -61,15 +63,15 @@ abstract class ShapeFactory
     public Shape CreateForm(ShapeTypes type) =>
         type switch
         {
-            type.Circle => Circle(),
-            type.Square => Square(),
-            type.Rectangle => Rectangle(),
+            ShapeTypes.Circle => Circle(),
+            ShapeTypes.Square => Square(),
+            ShapeTypes.Rectangle => Rectangle(),
             _ => throw new ArgumentException("Invalid enum value for type concreate object choosen", nameof(type))
         }; 
 
-    abstract Shape Circle();
-    abstract Shape Square();
-    abstract Shape Rectangle();
+    public abstract Shape Circle();
+    public abstract Shape Square();
+    public abstract Shape Rectangle();
 }
 
 // Factory Methods for each group of related concrete objects
@@ -82,21 +84,21 @@ enum ShapeTypes
 
 class RegularShapeFactory : ShapeFactory
 {
-    Shape Circle() =>  new CircleRegular();
-    Shape Square() => new SquareRegular();
-    Shape Rectangle() => new RectangleRegular();
+    public override Shape Circle() =>  new CircleRegular();
+    public override Shape Square() => new SquareRegular();
+    public override Shape Rectangle() => new RectangleRegular();
 }
 
 class RoundedShapeFactory : ShapeFactory
 {
-    Shape Circle() => new CircleRounded();
-    Shape Square() => new SquareRounded();
-    Shape Rectangle() => new RectangleRounded();
+    public override Shape Circle() => new CircleRounded();
+    public override Shape Square() => new SquareRounded();
+    public override Shape Rectangle() => new RectangleRounded();
 }
 
 class FilledShapeFactory : ShapeFactory
 {
-    Shape Circle() => new CircleFilled();
-    Shape Square() => new SquareFilled();
-    Shape Rectangle() => new RectangleFilled();
+    public override Shape Circle() => new CircleFilled();
+    public override Shape Square() => new SquareFilled();
+    public override Shape Rectangle() => new RectangleFilled();
 }

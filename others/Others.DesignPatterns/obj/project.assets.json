@@ -8,26 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Heik\\.nuget\\packages\\": {}
+    "C:\\Users\\heika\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HaraHeique\\Projetos\\playground-codes\\others\\Others.DesignPatterns\\Others.DesignPatterns.csproj",
+      "projectUniqueName": "C:\\Users\\heika\\OneDrive\\Documentos\\Software\\Projects\\playground-codes\\others\\Others.DesignPatterns\\Others.DesignPatterns.csproj",
       "projectName": "Others.DesignPatterns",
-      "projectPath": "D:\\HaraHeique\\Projetos\\playground-codes\\others\\Others.DesignPatterns\\Others.DesignPatterns.csproj",
-      "packagesPath": "C:\\Users\\Heik\\.nuget\\packages\\",
-      "outputPath": "D:\\HaraHeique\\Projetos\\playground-codes\\others\\Others.DesignPatterns\\obj\\",
+      "projectPath": "C:\\Users\\heika\\OneDrive\\Documentos\\Software\\Projects\\playground-codes\\others\\Others.DesignPatterns\\Others.DesignPatterns.csproj",
+      "packagesPath": "C:\\Users\\heika\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\heika\\OneDrive\\Documentos\\Software\\Projects\\playground-codes\\others\\Others.DesignPatterns\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Heik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\heika\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
