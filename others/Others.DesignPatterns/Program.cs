@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Others.DesignPatterns;
+using Sharprompt;
+
+Console.WriteLine("Criação das fábricas!");
+
+var factoryOption = Prompt.Select("Select the factory to work with", EnumExtensions.GetAllOptions<ShapeFormsTypes>());
+var shapeOption = Prompt.Select("Select the shape type to work with", EnumExtensions.GetAllOptions<ShapeTypes>());
+
+var shape = ShapeFactory.Create(factoryOption)
+    .CreateForm(shapeOption);
+
+Console.WriteLine("\nObjeto criado: " + shape);
