@@ -21,3 +21,7 @@ A abstração permite que os desenvolvedores interajam com partes de um sistema 
             - CIRCLE, SQUARE, RECTANGLE
         FILLED FACTORY:                     -- Here is the method factory
             - CIRCLE, SQUARE, RECTANGLE
+
+DICA: Toda vez que tiver um cenário matricial de um conjunto de combinações como é mostrado abaixo, então pode ser usado abstract factory:
+
+[abstract-factory-cenario](./docs/cenario-abstract-factory.webp)
