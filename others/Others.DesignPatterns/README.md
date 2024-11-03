@@ -24,4 +24,14 @@ A abstração permite que os desenvolvedores interajam com partes de um sistema 
 
 DICA: Toda vez que tiver um cenário matricial de um conjunto de combinações como é mostrado abaixo, então pode ser usado abstract factory:
 
-[abstract-factory-cenario](./docs/cenario-abstract-factory.webp)
+![abstract-factory-cenario](./docs/cenario-abstract-factory.webp)
+
+Nesta caso temos o seguinte:
+
+    FURNITURE FACTORIES:                    -- Here is the abstract factory 
+        ArtDeco FACTORY:                    -- Here is the method factory
+            - Chair, Sofa, CoffeeTable
+        Victorian FACTORY:                  -- Here is the method factory
+            - Chair, Sofa, CoffeeTable
+        Modern FACTORY:                     -- Here is the method factory
+            - Chair, Sofa, CoffeeTable 
