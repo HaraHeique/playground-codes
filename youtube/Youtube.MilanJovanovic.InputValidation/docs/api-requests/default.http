@@ -1,0 +1,9 @@
+#@HostAddress = http://localhost:5182
+#@HostAddress_SSL = https://localhost:7020
+
+GET {{hostAddressSsl}}/weatherforecast/
+Accept: application/json
+content-type: application/json
+#Authorization: token xxx
+
+###

@@ -1,0 +1,17 @@
+{
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "version": "v1",
+            "prodToken": "foo",
+            "nonProdToken": "bar"
+        },
+        "dev": {
+            "hostAddress": "http://localhost:5182",
+            "hostAddressSsl": "https://localhost:7020"
+        },
+        "prod": {
+            "baseUrl": "https://prod.example.com",
+            "token": "{{$shared prodToken}}"
+        }
+    }
+}
