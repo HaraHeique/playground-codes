@@ -1,3 +1,6 @@
+using System.Reflection;
+using FluentValidation;
+
 namespace Youtube.MilanJovanovic.InputValidation;
 
 public static class OpenApiConfig 
@@ -26,8 +29,17 @@ public static class OpenApiConfig
 
 public static class WebApiConfig 
 {
-    public static IServiceCollection AddApiConfiguration(this IServiceCollection services) 
+    public static IServiceCollection AddApiConfiguration(this IServiceCollection services, IConfiguration configuration) 
     {
+        // Config padrão
+        services.Configure<ValidationSettings>(configuration.GetSection(ValidationSettings.SectionKey));
+
+        // Alternativas a configuração de cima
+        services.AddOptions<ValidationSettings>()
+            .BindConfiguration(ValidationSettings.SectionKey)
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
+
         return services;
     }
 
@@ -36,5 +48,15 @@ public static class WebApiConfig
         app.UseHttpsRedirection();
 
         return app;
+    }
+}
+
+public static class ValidationConfig 
+{
+    public static IServiceCollection AddValidationConfiguration(this IServiceCollection services) 
+    {   
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly(), includeInternalTypes: true);
+
+        return services;
     }
 }
