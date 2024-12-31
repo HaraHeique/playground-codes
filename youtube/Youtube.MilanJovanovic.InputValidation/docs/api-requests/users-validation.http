@@ -1,0 +1,321 @@
+#### POST - registro de novo usuário com validação usando FluentValidator
+
+### Request com sucesso
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "middleName": "William",
+    "preferredName": "Johnny"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "interests": ["Technology", "Reading", "Travel"],
+  "dateOfBirth": "2000-05-15",
+  "phoneNumber": "+11234567890",
+  "acceptTerms": true
+}
+
+### Request com erro: Email em falta
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Email com formato errado
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "not-an-email",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Senha faltando
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Senha inválida (muito pequena)
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "short",
+  "confirmPassword": "short",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Senha e sua confirmação não batem
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "WrongPass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Informação pessoal nula
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": null,
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Informação pessoal faltante
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "",
+    "lastName": ""
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Falta de Endereço
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": null,
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Falta de Endereço
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "",
+    "city": "",
+    "state": "",
+    "postalCode": "",
+    "country": ""
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Data de nascimento no futuro
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2100-01-01",
+  "acceptTerms": true
+}
+
+### Request com erro: Idade abaixo do mínimo esperado
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2015-05-15",
+  "acceptTerms": true
+}
+
+### Request com erro: Termos não aceitos
+POST {{hostAddressSsl}}/api/users/register HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "SecurePass123",
+  "confirmPassword": "SecurePass123",
+  "personalInfo": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "addressInfo": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "postalCode": "62704",
+    "country": "USA"
+  },
+  "dateOfBirth": "2000-05-15",
+  "acceptTerms": false
+}

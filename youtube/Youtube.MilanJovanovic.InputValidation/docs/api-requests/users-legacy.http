@@ -1,0 +1,30 @@
+### POST users
+POST {{hostAddressSsl}}/api/users/register/legacy HTTP/1.1
+Content-Type: application/json
+#Authorization: Bearer ACCESS-TOKEN
+Accept: application/json
+
+{
+  "email": "string",
+  "password": "string",
+  "confirmPassword": "string",
+  "personalInfo": {
+    "firstName": "string",
+    "lastName": "string",
+    "middleName": "string",
+    "preferredName": "string"
+  },
+  "addressInfo": {
+    "street": "string",
+    "city": "string",
+    "state": "string",
+    "postalCode": "string",
+    "country": "string"
+  },
+  "interests": [
+    "string"
+  ],
+  "dateOfBirth": "2024-12-31T20:09:55.618Z",
+  "phoneNumber": "string",
+  "acceptTerms": true
+}

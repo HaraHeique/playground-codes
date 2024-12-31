@@ -40,7 +40,7 @@ internal sealed class UserRegistrationDtoValidator : AbstractValidator<UserRegis
         // When(x => x.AddressInfo is not null, () => 
         // {
         //     RuleFor(x => x.AddressInfo)
-        //         .NotNull().WithMessage("Address information is required");
+        //         .SetValidator(new AddressInfoValidator());
         // });
 
         RuleFor(x => x.DateOfBirth)
