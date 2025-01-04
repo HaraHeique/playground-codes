@@ -1,6 +1,6 @@
 namespace Youtube.MilanJovanovic.InputValidation.Models;
 
-public class UserRegistrationDto
+public class UserRegistrationDto : IRequest
 {
     public string Email { get; set; }
     public string Password { get; set; }

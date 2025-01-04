@@ -5,19 +5,24 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Youtube.MilanJovanovic.InputValidation.Middlewares;
 
+/// <summary>
+/// Só funciona para MVC Controllers
+/// </summary>
+/// <typeparam name="TRequest"></typeparam>
+/// <param name="validator"></param>
 [AttributeUsage(validOn: AttributeTargets.Class | AttributeTargets.Method)]
-public class RequestValidationAttributeFilter<TValidator>(IValidator<TValidator> validator) 
-    : Attribute, IAsyncActionFilter where TValidator : class
+public class RequestValidationAttributeFilter<TRequest>(IValidator<TRequest> validator) 
+    : Attribute, IAsyncActionFilter where TRequest : class
 {
     public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
-        if (!context.ActionArguments.TryGetValue(typeof(TValidator).Name.ToLower(), out var value)) 
+        if (!context.ActionArguments.TryGetValue(typeof(TRequest).Name.ToLower(), out var value)) 
         {
             await next();
             return;
         }
 
-        if (value is not TValidator model)
+        if (value is not TRequest model)
         {
             await next();
             return;
@@ -41,6 +46,3 @@ public class RequestValidationAttributeFilter<TValidator>(IValidator<TValidator>
         });
     }
 }
-
-// TODO: Em minimal APIs parece que tem que usar o IEndpointFilter e nao tem como utilizar os AttributeFilters normais: https://medium.com/@malarsharmila/minimal-apis-with-filters-in-net-188afffce40a
-

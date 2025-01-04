@@ -12,6 +12,7 @@ var app = builder.Build();
 
 app.UseSwaggerConfiguration(app.Environment);
 app.UseApiConfiguration();
+//app.UseGlobalFilters();
 
 // Configure routes endpoints
 app.RegisterWeatherForecastEndpoints()

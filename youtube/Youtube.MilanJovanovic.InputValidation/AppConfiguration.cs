@@ -1,5 +1,7 @@
 using System.Reflection;
 using FluentValidation;
+using Youtube.MilanJovanovic.InputValidation.Middlewares;
+using Youtube.MilanJovanovic.InputValidation.Models;
 
 namespace Youtube.MilanJovanovic.InputValidation;
 
@@ -40,12 +42,35 @@ public static class WebApiConfig
             .ValidateDataAnnotations()
             .ValidateOnStart();
 
+        services.AddExceptionHandler<GlobalExceptionHandler>();
+        services.AddProblemDetails();
+
         return services;
     }
 
     public static IApplicationBuilder UseApiConfiguration(this IApplicationBuilder app) 
     {
         app.UseHttpsRedirection();
+
+        // Versão antiga e convencional de uso de middlewares exceçoes globais
+        app.UseMiddleware<ConventionalExceptionHandlingMiddleware>();
+
+        // Versão nova de uso de middlewares exceçoes globais (Nova versão a partir do .Net 8)
+        app.UseExceptionHandler();
+
+        return app;
+    }
+
+    /// <summary>
+    /// Para trabalhar com filtros globais usando MinimalApis: https://github.com/dotnet/aspnetcore/issues/43237
+    /// </summary>
+    /// <param name="app"></param>
+    /// <returns></returns>
+    public static WebApplication UseGlobalFilters(this WebApplication app) 
+    {
+        var routes = app.MapGroup(string.Empty);
+
+        routes.AddEndpointFilter<RequestValidatorEndpointFilter<IRequest>>();
 
         return app;
     }

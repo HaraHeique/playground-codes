@@ -1,5 +1,6 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using Youtube.MilanJovanovic.InputValidation.Middlewares;
 using Youtube.MilanJovanovic.InputValidation.Models;
 using Youtube.MilanJovanovic.InputValidation.Models.Validators;
 
@@ -157,6 +158,18 @@ public static class UserEndpoints
         .WithName("RegisterUserWithInlineValidation")
         .WithTags(TagName)
         .WithOpenApi();
+
+        endpointBuilder.MapPost("api/users/register/bonus/endpoint-filter", (UserRegistrationDto request, IValidator<UserRegistrationDto> validator) =>
+        {
+            //var validationResult = validator.Validate(request);
+            // A validação se encontra no IEndpointFilter
+
+            return Results.Ok(request);
+        })
+        .WithName("RegisterUserWithEndpointFilter")
+        .WithTags(TagName)
+        .WithOpenApi()
+        .AddEndpointFilter<RequestValidatorEndpointFilter<UserRegistrationDto>>();
 
         return endpointBuilder;
     }
