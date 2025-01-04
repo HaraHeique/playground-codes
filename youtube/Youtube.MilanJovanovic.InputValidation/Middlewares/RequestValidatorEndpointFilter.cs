@@ -32,7 +32,10 @@ public class RequestValidatorEndpointFilter<TRequest> : IEndpointFilter where TR
         var validationResult = await validator.ValidateAsync(objectRequest);
 
         if (!validationResult.IsValid)
-            return Results.ValidationProblem(validationResult.ToDictionary()); // TODO: Colocar mais infos aqui do ProblemDetails. Faltam informaçoes desta forma
+            return Results.ValidationProblem(
+                errors: validationResult.ToDictionary(),
+                type: "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1"
+            ); // TODO: Colocar mais infos aqui do ProblemDetails. Faltam informaçoes desta forma
 
         return await next(context);
     }
