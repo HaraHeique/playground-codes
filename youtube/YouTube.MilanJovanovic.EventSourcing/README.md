@@ -1,4 +1,4 @@
-# Validação de dados de entrada API's
+# Event Sourcing
 
 Aprenda os fundamentos do Event Sourcing no .NET com este guia para iniciantes. Exploraremos como armazenar o estado do seu aplicativo como uma sequência de eventos em vez de apenas o estado atual. Começando com os conceitos principais, abordaremos a modelagem de eventos, a criação de agregados, a aplicação de eventos, a implementação de lógica de negócios e a construção de projeções para consultas eficientes. Perfeito para desenvolvedores .NET que buscam entender os padrões do Event Sourcing e sua implementação prática. Exemplos de código incluídos.
 
