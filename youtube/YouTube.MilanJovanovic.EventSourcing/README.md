@@ -4,7 +4,7 @@ Aprenda os fundamentos do Event Sourcing no .NET com este guia para iniciantes. 
 
 ## O que é Event Sourcing
 
-Event Sourcing é uma padrão de design de arquitetura do qual guardamos as mudanas de estado do nosso domínio através de eventos imutáveis dentro de uma stream append only log. Ou seja, é sobre persistir as mudanças de estado dos seus modelos de domínio numa sério sequencial de eventos.
+Event Sourcing é uma padrão de design de arquitetura do qual guardamos as mudanças de estado do nosso domínio através de eventos imutáveis dentro de uma stream append only log. Ou seja, é sobre persistir as mudanças de estado dos seus modelos de domínio numa série sequencial de eventos.
 
 Alguns build blocks do Event Sourcing são:
 
