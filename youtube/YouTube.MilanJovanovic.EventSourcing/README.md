@@ -42,6 +42,16 @@ Note na figura abaixo que a partir da stream de eventos armazenados podemos cria
 
 OBS.: Projections também podem ser chamadas de Read Models, View Models ou Query Models.
 
+### Diferença de Logs de Auditoria para Event Sourcing
+
+A diferença deles está principalmente **nas intenções que cada um tem dentro de um sistema**. Enquanto que os logs de auditoria se preocupa em trackear e saber quais são as atividades realizadas dentro de um sistema para fins de segurança, auditoria e rastreabilidade: 
+
+![diferenca-logs-auditoria](docs/logs-auditoria.png)
+
+O event sourcing foca literalmente em armazenar todas as mudanças de estado do sistema ao invés de só o estado final (corrente).
+
+![diferenca-event-sourcing](docs/event-sourcing.png)
+
 ## Como executar?
 
 Principal forma utilizada para executar a aplicação foi utilizando a [Visual Code](https://code.visualstudio.com/download), porém pode ser utilizadas outras ferramentas também.
