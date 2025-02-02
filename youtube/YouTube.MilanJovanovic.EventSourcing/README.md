@@ -29,28 +29,32 @@ Para reconstruir o estado de um objeto do nosso domínio em um dado período do 
 
 Note que foi obtida a stream dos eventos de um determinado objeto do domínio (identificador único) e feito o replay dos eventos dele para obter o estado corrente OU estado até um determinado ponto no tempo. 
 
-## Como executar? (TODO: MUDAR AQUI)
+### Projections
+
+Ter que fazer o replay dos eventos toda vez para obter o estado corrente de um objeto do domínio ou estado até um determinado ponto pode ser muito mais muito custoso computacionalmente falando.
+Para resolver este problema usamos as chamadas *Projections*, que nos permite criar as READ MODELS para guardando o estado em um determinado ponto desejado, sem precisar de ter que recalcular toda a stream de eventos.
+
+![projections](docs/projections.png)
+
+Note na figura abaixo que a partir da stream de eventos armazenados podemos criar diferentes Read Models Views diferentes de acordo com as necessidades do negócio e do projeto, como por exemplo: uma view do tracker do saldo atual do cliente, lista de todas transações dos últimos 2 meses, atividades recentes, resumo mensal da conta do cliente e afins.
+
+![read-models-samples](docs/read-models-samples.png)
+
+OBS.: Projections também podem ser chamadas de Read Models, View Models ou Query Models.
+
+## Como executar?
 
 Principal forma utilizada para executar a aplicação foi utilizando a [Visual Code](https://code.visualstudio.com/download), porém pode ser utilizadas outras ferramentas também.
 
-Também é necessário ter instalado a versão da plataforma de desenvolvimento [.NET 8](https://dotnet.microsoft.com/pt-br/download/dotnet/8.0).
+Também é necessário ter instalado a versão da plataforma de desenvolvimento [.NET 9](https://dotnet.microsoft.com/pt-br/download/dotnet/9.0).
 
-### Execução pelo Visual Code (TODO: MUDAR AQUI)
+### Execução pelo Visual Code
 
 Basta abrir o terminal de sua preferência na raíz do projeto e rodar o seguinte comando:
 
 ```
-dotnet watch run --urls "https://localhost:7020"
+dotnet run
 ```
-
-OBS.: com o comando acima com watch mode já irá fazer o launch da url da API Open API Docs, que no caso deste projeto é o Swagger.
-Caso deseje rodar sem watch mode basta executar o seguinte comando:
-
-```
-dotnet run --urls "https://localhost:7020"
-```
-
-Aproveite e use os arquivos [`.http`](https://stackoverflow.com/questions/78119582/what-is-api-http-file-in-net-8) para testar os endpoints desenvolvidos neste POC/playground. Com eles tu conseguirá realizar as solicitações HTTP com facilidade através do Visual Code (ou qualquer outro editor de texto ou IDE de preferência) com maior facilidade e também enxergar as respostas.
 
 ## Referências
 
