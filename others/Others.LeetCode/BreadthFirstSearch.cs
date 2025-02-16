@@ -123,9 +123,9 @@ public class BreadthFirstSearchSolution
     /// <param name="root"></param>
     private static void RecursionSolution(TreeNode root) 
     {
-        PriorityQueue<(int Value, int Level), string> values = new();
+        PriorityQueue<(int Value, int Level), string> valuesInOrder = new();
 
-        values.Enqueue((root.Value, 1), "1");
+        valuesInOrder.Enqueue((root.Value, 1), "1");
         int numberOfSteps = 0;
 
         Execute(root, currentLevel: 1);
@@ -138,10 +138,10 @@ public class BreadthFirstSearchSolution
             int nextLevel = currentLevel + 1;
 
             if (currentNode.HasLeftChild()) 
-                values.Enqueue((currentNode.LeftChild!.Value, nextLevel), $"{nextLevel}.{numberOfSteps++}");
+                valuesInOrder.Enqueue((currentNode.LeftChild!.Value, nextLevel), $"{nextLevel}.{numberOfSteps++}");
 
             if (currentNode.HasRightChild()) 
-                values.Enqueue((currentNode.RightChild!.Value, nextLevel), $"{nextLevel}.{numberOfSteps++}");
+                valuesInOrder.Enqueue((currentNode.RightChild!.Value, nextLevel), $"{nextLevel}.{numberOfSteps++}");
 
             Execute(currentNode.LeftChild, currentLevel + 1);
             Execute(currentNode.RightChild, currentLevel + 1);
@@ -151,7 +151,7 @@ public class BreadthFirstSearchSolution
         {
             int currentLevel = 1;
 
-            while (values.TryDequeue(out var item, out var _))
+            while (valuesInOrder.TryDequeue(out var item, out var _))
             {
                 if (currentLevel != item.Level) Console.WriteLine();
 
