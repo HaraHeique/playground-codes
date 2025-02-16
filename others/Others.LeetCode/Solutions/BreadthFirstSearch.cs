@@ -1,6 +1,4 @@
-using System.Collections;
-
-namespace Others.LeetCode;
+namespace Others.LeetCode.Solutions;
 
 public class BreadthFirstSearchSolution
 {

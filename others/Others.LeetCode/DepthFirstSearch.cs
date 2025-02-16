@@ -1,2 +1,0 @@
-namespace Others.LeetCode;
-
