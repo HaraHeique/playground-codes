@@ -25,7 +25,7 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
     - 🔹 Complexidade: O(V + E) → Onde V é o número de vértices e E é o número de arestas.
     - 🚀 Resumindo: DFS é ideal para buscas profundas, caminhos alternativos e exploração completa de grafos.
 
-- [Fibonacci Sequence](./Solutions/Fibonacci.cs): A sequência de Fibonacci é uma série de números onde cada termo é a soma dos dois anteriores, muito usada em algoritmos de otimização e modelagem matemática. Fórmula:
+- [Fibonacci Sequence](./Solutions/FibonacciSequence.cs): A sequência de Fibonacci é uma série de números onde cada termo é a soma dos dois anteriores, muito usada em algoritmos de otimização e modelagem matemática. Fórmula:
 
         F(n)=F(n−1)+F(n−2)
 
