@@ -1,5 +1,30 @@
-﻿using Others.LeetCode.Solutions;
+﻿using Others.LeetCode;
+using Others.LeetCode.Solutions;
 
-BreadthFirstSearchSolution.Execute();
+ConsoleUtils.DivideSolution();
 
-DepthFirstSearchSolution.Execute();
+BreadthFirstSearchSolution.ShowSolution();
+
+ConsoleUtils.DivideSolution();
+
+DepthFirstSearchSolution.ShowSolution();
+
+ConsoleUtils.DivideSolution();
+
+InvertBinaryTreeSolution.ShowSolution();
+
+ConsoleUtils.DivideSolution();
+
+FibonacciSequence.ShowSolution("9");
+
+
+
+
+
+
+
+
+
+
+
+

@@ -36,4 +36,5 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
         - ✅ Recursivo: Troca os filhos em cada chamada recursiva.
         - ✅ Iterativo (BFS/DFS): Usa uma fila ou pilha para inverter nível por nível.
     - 🔹 Complexidade: O(n) → Onde n é o número de nós na árvore.
+    - 🔹 Exemplo: https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg
 

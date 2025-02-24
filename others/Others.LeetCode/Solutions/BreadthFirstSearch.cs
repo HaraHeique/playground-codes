@@ -47,7 +47,7 @@ public class BreadthFirstSearchSolution
         public bool HasRightChild() => RightChild is not null;
     }
 
-    public static void Execute(params string[] _) 
+    public static void ShowSolution(params string[] _) 
     {
         Console.WriteLine("Executing BFS Solution");
 
@@ -141,8 +141,8 @@ public class BreadthFirstSearchSolution
             if (currentNode.HasRightChild()) 
                 valuesInOrder.Enqueue((currentNode.RightChild!.Value, nextLevel), $"{nextLevel}.{numberOfSteps++}");
 
-            Execute(currentNode.LeftChild, currentLevel + 1);
-            Execute(currentNode.RightChild, currentLevel + 1);
+            Execute(currentNode.LeftChild, nextLevel);
+            Execute(currentNode.RightChild, nextLevel);
         }
 
         void ShowResult() 

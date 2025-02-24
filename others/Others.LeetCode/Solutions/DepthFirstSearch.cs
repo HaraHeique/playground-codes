@@ -47,7 +47,7 @@ public class DepthFirstSearchSolution
         public bool HasRightChild() => RightChild is not null;
     }
 
-    public static void Execute(params string[] _) 
+    public static void ShowSolution(params string[] _) 
     {
         Console.WriteLine("Executing DFS Solution");
 
@@ -85,7 +85,5 @@ public class DepthFirstSearchSolution
             Execute(currentNode.LeftChild);
             Execute(currentNode.RightChild);
         }
-
-        Console.WriteLine();
     }
 }
