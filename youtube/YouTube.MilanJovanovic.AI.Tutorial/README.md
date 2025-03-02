@@ -14,14 +14,13 @@ Também é necessário ter instalado a versão da plataforma de desenvolvimento 
 
 ### Execução pelo Visual Studio
 
-Basta abrir a .sln de um dos dois projetos `/after` ou `/before` e executar o projeto.
+Basta abrir a .sln o projeto no diretório `/after` e executar o projeto.
 Note que o único profile existente é o que roda o docker-compose.
 
-Caso não dê certo então rode o container docker da LLM Ollama localmente:
+Caso não dê certo então rode respectivamente o container docker da ferramenta `Ollama` localmente, assim como a LLM escolhia, que no nosso caso será a `llama3`:
 
     docker run --gpus all -d -v ollama_data:/root/.ollama -p 11434:11434 --name ollama ollama/ollama:latest
     docker exec -it ollama ollama pull llama3
-    docker exec -it ollama ollama pull phi3:mini
 
 OBS. 1: qualquer coisa assista ao vídeo na seção de referências.
 OBS. 2: dependendo da sua máquina não consiguirá rodar a LLM na sua máquina. Daí tem que mexer nas configurações ou tentar em outra.
@@ -32,3 +31,5 @@ Principais referências logo abaixo:
 
 - [Vídeo base](https://www.youtube.com/watch?v=4B3ppx2U8bE)
 - [AI For .NET Developers](https://learn.microsoft.com/en-us/dotnet/ai/)
+- [Ollama](https://ollama.com/)
+- [O que é Ollama](https://www.hostinger.com.br/tutoriais/o-que-e-ollama)
