@@ -14,7 +14,7 @@ Também é necessário ter instalado a versão da plataforma de desenvolvimento 
 
 ### Execução pelo Visual Studio
 
-Basta abrir a .sln o projeto no diretório `/after` e executar o projeto.
+Basta abrir a .sln o projeto no diretório `/src` e executar o projeto.
 Note que o único profile existente é o que roda o docker-compose.
 
 Caso não dê certo então rode respectivamente o container docker da ferramenta `Ollama` localmente, assim como a LLM escolhia, que no nosso caso será a `llama3`:
@@ -32,4 +32,4 @@ Principais referências logo abaixo:
 - [Vídeo base](https://www.youtube.com/watch?v=4B3ppx2U8bE)
 - [AI For .NET Developers](https://learn.microsoft.com/en-us/dotnet/ai/)
 - [Ollama](https://ollama.com/)
-- [O que é Ollama](https://www.hostinger.com.br/tutoriais/o-que-e-ollama)
+- [O que é Ollama?](https://www.hostinger.com.br/tutoriais/o-que-e-ollama)
