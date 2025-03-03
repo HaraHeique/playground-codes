@@ -11,6 +11,22 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
 
 ## Lista de problemas e soluções
 
+- [Binary Tree](./Solutions/BinaryTree.cs): é uma estrutura de dados hierárquica onde cada nó tem, no máximo, dois filhos: esquerdo e direito.
+
+    - 🔹 Tipos principais:
+        - ✅ Full Binary Tree → Cada nó tem 0 ou 2 filhos.
+        - ✅ Complete Binary Tree → Todos os níveis são preenchidos da esquerda para a direita.
+        - ✅ Perfect Binary Tree → Todos os nós internos têm dois filhos e todas as folhas estão no mesmo nível.
+        - ✅ Balanced Binary Tree → Diferença de altura entre subárvores é mínima.
+
+    - 🔹 Complexidades: Busca, Inserção, Remoção:
+        
+        ➡ O(log n) em árvores balanceadas (como AVL, Red-Black).
+        
+        ➡ O(n) no pior caso (árvore degenerada).
+
+    🚀 Resumindo: Binary Tree é uma estrutura fundamental usada em algoritmos, armazenamento e buscas eficientes.
+
 - [Breadth First Search](./Solutions/BreadthFirstSearch.cs): é um algoritmo de busca em largura usado para percorrer ou buscar elementos em grafos ou árvores. Ele explora todos os nós de um nível antes de passar para o próximo, garantindo a menor distância em grafos não ponderados.
     - ✅ Usa uma fila (queue) para armazenar os nós a serem explorados.
     - ✅ Garante o caminho mais curto em grafos não ponderados.
@@ -60,19 +76,3 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
         - ❌ Maior uso de memória devido aos ponteiros.
 
         🚀 Resumindo: LinkedList é uma estrutura flexível para manipulação eficiente de dados, mas com acesso sequencial mais lento que um array.
-
-- [Binary Tree](./Solutions/BinaryTree.cs): é uma estrutura de dados hierárquica onde cada nó tem, no máximo, dois filhos: esquerdo e direito.
-
-    - 🔹 Tipos principais:
-        - ✅ Full Binary Tree → Cada nó tem 0 ou 2 filhos.
-        - ✅ Complete Binary Tree → Todos os níveis são preenchidos da esquerda para a direita.
-        - ✅ Perfect Binary Tree → Todos os nós internos têm dois filhos e todas as folhas estão no mesmo nível.
-        - ✅ Balanced Binary Tree → Diferença de altura entre subárvores é mínima.
-
-    - 🔹 Complexidades: Busca, Inserção, Remoção:
-        
-        ➡ O(log n) em árvores balanceadas (como AVL, Red-Black).
-        
-        ➡ O(n) no pior caso (árvore degenerada).
-
-    🚀 Resumindo: Binary Tree é uma estrutura fundamental usada em algoritmos, armazenamento e buscas eficientes.
