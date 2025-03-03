@@ -142,7 +142,7 @@ public class DepthFirstSearchSolution
             var (currentNode, level) = sequenceOfNodes.Pop();
             int nextLevel = level + 1;
 
-            Console.Write($"{currentNode.Value} => ");
+            Console.Write($"{currentNode.Value}-{level} => ");
 
             if (currentNode.HasRightChild())
                 sequenceOfNodes.Push((currentNode.RightChild!, nextLevel));
