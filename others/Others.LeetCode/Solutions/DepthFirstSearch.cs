@@ -67,7 +67,9 @@ public class DepthFirstSearchSolution
         Console.WriteLine();
         ExecuteSolutionWithOutsideStack(rootNode);
         Console.WriteLine();
-        
+        ExecuteCommonSolution(rootNode);
+        Console.WriteLine();
+
         Console.WriteLine("DFS Solution has been finished!");
     }
 
@@ -91,7 +93,7 @@ public class DepthFirstSearchSolution
     }
     
     /// <summary>
-    /// Minha solução usando recursão e uma pilha à parte, ao invés de usar a pilha de chamadas de funções
+    /// Minha solução usando recursão e uma pilha à parte, mas acaba dando na mesma soluçao acima, só que mais complexo...
     /// </summary>
     /// <param name="root"></param>
     private static void ExecuteSolutionWithOutsideStack(TreeNode root) 
@@ -122,6 +124,31 @@ public class DepthFirstSearchSolution
                 sequenceOfNodes.Push((currentNode.RightChild, nextLevel)!);
                 Execute();
             }
+        }
+    }
+    
+    /// <summary>
+    /// Minha solução usando recursão e uma pilha à parte, ao invés de usar a pilha de chamadas de funções
+    /// </summary>
+    /// <param name="root"></param>
+    private static void ExecuteCommonSolution(TreeNode root) 
+    {
+        Stack<(TreeNode Node, int Level)> sequenceOfNodes = new();
+
+        sequenceOfNodes.Push((root, 1));
+
+        while (sequenceOfNodes.Count > 0)
+        {
+            var (currentNode, level) = sequenceOfNodes.Pop();
+            int nextLevel = level + 1;
+
+            Console.Write($"{currentNode.Value} => ");
+
+            if (currentNode.HasRightChild())
+                sequenceOfNodes.Push((currentNode.RightChild!, nextLevel));
+
+            if (currentNode.HasLeftChild())
+                sequenceOfNodes.Push((currentNode.LeftChild!, nextLevel));
         }
     }
 }
