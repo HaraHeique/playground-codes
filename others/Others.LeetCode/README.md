@@ -38,3 +38,41 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
     - 🔹 Complexidade: O(n) → Onde n é o número de nós na árvore.
     - 🔹 Exemplo: https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg
 
+- [Invert Linked List](./Solutions/InvertLinkedList.cs): consiste em reverter a ordem dos nós de uma lista ligada, fazendo com que o último nó se torne o primeiro e vice-versa.
+
+    🔹 Exemplo:
+
+        Antes: 1 → 2 → 3 → 4 → NULL
+        Depois de inverter: 4 → 3 → 2 → 1 → NULL
+
+- [Linked List](./Solutions/LinkedList.cs): é uma estrutura de dados linear onde os elementos (nós) são armazenados de forma não contígua na memória e conectados por ponteiros.
+    - 🔹 Tipos:
+        - ✅ Singly Linked List → Cada nó aponta para o próximo.
+        - ✅ Doubly Linked List → Cada nó aponta para o próximo e o anterior.
+        - ✅ Circular Linked List → O último nó aponta para o primeiro.
+
+    - 🔹 Vantagens:
+        - ✔ Inserção/remoção eficiente (O(1) se já tiver a referência do nó).
+        - ✔ Uso dinâmico de memória, sem necessidade de redimensionamento.
+
+    - 🔹 Desvantagens:
+        - ❌ Acesso lento a elementos (O(n)).
+        - ❌ Maior uso de memória devido aos ponteiros.
+
+        🚀 Resumindo: LinkedList é uma estrutura flexível para manipulação eficiente de dados, mas com acesso sequencial mais lento que um array.
+
+- [Binary Tree](./Solutions/BinaryTree.cs): é uma estrutura de dados hierárquica onde cada nó tem, no máximo, dois filhos: esquerdo e direito.
+
+    - 🔹 Tipos principais:
+        - ✅ Full Binary Tree → Cada nó tem 0 ou 2 filhos.
+        - ✅ Complete Binary Tree → Todos os níveis são preenchidos da esquerda para a direita.
+        - ✅ Perfect Binary Tree → Todos os nós internos têm dois filhos e todas as folhas estão no mesmo nível.
+        - ✅ Balanced Binary Tree → Diferença de altura entre subárvores é mínima.
+
+    - 🔹 Complexidades: Busca, Inserção, Remoção:
+        
+        ➡ O(log n) em árvores balanceadas (como AVL, Red-Black).
+        
+        ➡ O(n) no pior caso (árvore degenerada).
+
+    🚀 Resumindo: Binary Tree é uma estrutura fundamental usada em algoritmos, armazenamento e buscas eficientes.

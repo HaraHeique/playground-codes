@@ -1,1 +1,1 @@
-// TODO: FAZER A IMPLEMENTAÇÃO AQUI!
+// TODO: FAZER A IMPLEMENTAÇÃO AQUI de inversao só da lista simplesmente encadeada
