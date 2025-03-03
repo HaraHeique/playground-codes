@@ -16,15 +16,3 @@ InvertBinaryTreeSolution.ShowSolution();
 ConsoleUtils.DivideSolution();
 
 FibonacciSequence.ShowSolution("9");
-
-
-
-
-
-
-
-
-
-
-
-
