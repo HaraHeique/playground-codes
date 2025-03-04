@@ -4,8 +4,9 @@ public class LinkedListSolution
 {
     public class LinkedList<T> 
     {
-        public LinkedListNode<T> Head { get; private set; }
-        public LinkedListNode<T> Tail { get; private set; }
+        public LinkedListNode<T>? Head { get; private set; }
+        public LinkedListNode<T>? Tail { get; private set; }
+        public int Count { get; private set; }
 
         public static LinkedList<T> Create(T value) 
         {
@@ -14,7 +15,8 @@ public class LinkedListSolution
             var instance = new LinkedList<T> 
             {
                 Head = firstNode,
-                Tail = firstNode
+                Tail = firstNode,
+                Count = 1
             };
 
             return instance;
@@ -22,17 +24,21 @@ public class LinkedListSolution
 
         public LinkedList<T> WithNextNode(T value) 
         {
-            var newTailNode = Tail.WithLastNode(value);
+            var newTailNode = Tail!.WithLastNode(value);
             Tail = newTailNode;
+
+            Count++;
 
             return this;
         }
 
         public LinkedList<T> WithHeaderNode(T value) 
         {
-            var newHeaderNode = LinkedListNode<T>.Construct(value)
-                .WithNextNode(Head); 
+            var newHeaderNode = LinkedListNode<T>.Construct(value);
+            newHeaderNode.WithNextNode(Head!); 
             Head = newHeaderNode;
+
+            Count++;
 
             return this;
         }
@@ -96,6 +102,7 @@ public class LinkedListSolution
             currentNode = currentNode.Next;
         }
 
-        Console.Write("NULL");
+        Console.WriteLine("NULL");
+        Console.WriteLine("Total number of nodes: {0}", linkedList.Count);
     }
 }
