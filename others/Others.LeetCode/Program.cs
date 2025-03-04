@@ -16,3 +16,7 @@ InvertBinaryTreeSolution.ShowSolution();
 ConsoleUtils.DivideSolution();
 
 FibonacciSequence.ShowSolution("9");
+
+ConsoleUtils.DivideSolution();
+
+LinkedListSolution.ShowSolution();
