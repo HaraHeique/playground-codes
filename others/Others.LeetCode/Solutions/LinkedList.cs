@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Others.LeetCode.Solutions;
 
 public class LinkedListSolution
@@ -6,7 +8,7 @@ public class LinkedListSolution
     {
         public LinkedListNode<T>? Head { get; private set; }
         public LinkedListNode<T>? Tail { get; private set; }
-        public int Count { get; private set; }
+        public int Count { get; private set; } = 0;
 
         public static LinkedList<T> Create(T value) 
         {
@@ -24,8 +26,8 @@ public class LinkedListSolution
 
         public LinkedList<T> WithNextNode(T value) 
         {
-            var newTailNode = Tail!.WithLastNode(value);
-            Tail = newTailNode;
+            Tail!.WithLastNode(value);
+            Tail = Tail.Next;
 
             Count++;
 
@@ -41,6 +43,22 @@ public class LinkedListSolution
             Count++;
 
             return this;
+        }
+
+        public override string ToString()
+        {
+            var currentNode = Head;
+            var representationAsStr = new StringBuilder();
+
+            while (currentNode != null) 
+            {
+                representationAsStr.Append($"{currentNode.Value} => ");
+                currentNode = currentNode.Next;
+            }
+
+            representationAsStr.Append("NULL");
+
+            return representationAsStr.ToString();
         }
     }
 
@@ -64,7 +82,7 @@ public class LinkedListSolution
             return instance;
         }
 
-        public LinkedListNode<T> WithLastNode(T value)
+        public void WithLastNode(T value)
         {
             var newNode = new LinkedListNode<T>
             {
@@ -73,16 +91,9 @@ public class LinkedListSolution
             };
 
             Next = newNode;
-
-            return newNode;
         }
 
-        public LinkedListNode<T> WithNextNode(LinkedListNode<T> newNode)
-        {
-            Next = newNode;
-
-            return newNode;
-        }
+        public void WithNextNode(LinkedListNode<T> newNode) => Next = newNode;
     }
 
     public static void ShowSolution(params string[] _) 
@@ -92,17 +103,10 @@ public class LinkedListSolution
             .WithNextNode(20)
             .WithNextNode(30)
             .WithHeaderNode(-10)
-            .WithNextNode(110);
+            .WithNextNode(110)
+            .WithHeaderNode(-100);
 
-        var currentNode = linkedList.Head;
-
-        while (currentNode is not null)
-        {
-            Console.Write($"{currentNode.Value} => ");
-            currentNode = currentNode.Next;
-        }
-
-        Console.WriteLine("NULL");
+        Console.WriteLine(linkedList.ToString());
         Console.WriteLine("Total number of nodes: {0}", linkedList.Count);
     }
 }

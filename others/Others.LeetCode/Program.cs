@@ -20,3 +20,7 @@ FibonacciSequence.ShowSolution("9");
 ConsoleUtils.DivideSolution();
 
 LinkedListSolution.ShowSolution();
+
+ConsoleUtils.DivideSolution();
+
+WordSearchSolution.ShowSolution();
