@@ -76,3 +76,9 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
         - ❌ Maior uso de memória devido aos ponteiros.
 
         🚀 Resumindo: LinkedList é uma estrutura flexível para manipulação eficiente de dados, mas com acesso sequencial mais lento que um array.
+
+- [Word Search](./Solutions/WordSearch.cs): é um problema do LeetCode onde, dada uma matriz de caracteres e uma palavra, você deve verificar se a palavra pode ser formada seguindo caminhos adjacentes (cima, baixo, esquerda, direita) sem reutilizar a mesma célula.
+    - 🔹 Abordagem comum:
+        - ✅ Backtracking + DFS (Depth-First Search) → Explora todas as possibilidades recursivamente.
+        - ✅ Marca células visitadas temporariamente para evitar repetições.
+        - ✅ Complexidade: O(m * n * 4^L), onde m = linhas, n = colunas, L = comprimento da palavra.

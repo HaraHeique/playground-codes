@@ -6,6 +6,8 @@ namespace Others.LeetCode.Solutions;
 public class WordSearchSolution
 {
     private const char _inexistentToken = '#';
+    private const int _secondLetterIndex = 1;
+    private static HashSet<(int Line, int Column)> _positionsAlreadyVisited = [];
 
     public static void ShowSolution(params string[] _) 
     {
@@ -19,11 +21,11 @@ public class WordSearchSolution
 
         char[][] board =  
         [
-            ['A', 'B', 'C', 'E'],
+            ['A', 'B', 'C', 'D'],
             ['S', 'F', 'C', 'S'],
-            ['A', 'D', 'E', 'E']
+            ['A', 'D', 'C', 'E']
         ];
-        string word = "ABCCED";
+        string word = "ABCCCD";
 
         bool result = Exists(board, word);
 
@@ -39,8 +41,8 @@ public class WordSearchSolution
 
         foreach (var position in possiblePositions)
         {
-            int secondLetterIndex = 1;
-            if (ExistsInBoard(position, board, word, secondLetterIndex)) return true;
+            _positionsAlreadyVisited.Clear();
+            if (ExistsInBoard(position, board, word, _secondLetterIndex)) return true;
         }
 
         return false;
@@ -71,6 +73,9 @@ public class WordSearchSolution
     private static bool ExistsInBoard((int Line, int Column) positionToVerify, char[][] board, string word, int letterIndex)
     {
         if (AllLettersExistsInBoard(word, letterIndex)) return true;
+
+        if (_positionsAlreadyVisited.Contains(positionToVerify)) return false;
+        _positionsAlreadyVisited.Add(positionToVerify);
 
         char letterToFind = word[letterIndex];
 
