@@ -24,3 +24,7 @@ LinkedListSolution.ShowSolution();
 ConsoleUtils.DivideSolution();
 
 WordSearchSolution.ShowSolution();
+
+ConsoleUtils.DivideSolution();
+
+TwoSumSequence.ShowSolution();

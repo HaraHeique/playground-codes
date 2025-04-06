@@ -82,3 +82,19 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
         - ✅ Backtracking + DFS (Depth-First Search) → Explora todas as possibilidades recursivamente.
         - ✅ Marca células visitadas temporariamente para evitar repetições.
         - ✅ Complexidade: O(m * n * 4^L), onde m = linhas, n = colunas, L = comprimento da palavra.
+
+- [Two Sum](./Solutions/TwoSum.cs): é um problema clássico do LeetCode onde, dado um array de inteiros e um alvo (`target`), o objetivo é encontrar os índices de dois números no array cuja soma seja igual ao alvo.
+
+    - 🔹 Exemplo:
+
+            Entrada: `nums = [2, 7, 11, 15], target = 9`  
+            Saída: `[0, 1]` (pois `nums[0] + nums[1] == 9`)
+
+    - 🔹 Abordagem eficiente: 
+
+        ✅ Usar um **dicionário (hashmap)** para armazenar os valores e seus índices enquanto percorre o array.  
+        ✅ A cada elemento, verificar se `(target - elemento)` já existe no dicionário.
+
+    - 🔹 Complexidade:  
+        ✅ Tempo: O(n)  
+        ✅ Espaço: O(n)
