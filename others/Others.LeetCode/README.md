@@ -41,6 +41,12 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
     - 🔹 Complexidade: O(V + E) → Onde V é o número de vértices e E é o número de arestas.
     - 🚀 Resumindo: DFS é ideal para buscas profundas, caminhos alternativos e exploração completa de grafos.
 
+- [Fatorial Sequence](./Solutions/Fatorial.cs): Envolve calcular o fatorial de um número n, ou aplicar o conceito em problemas relacionados a combinatória, permutações ou recursão.
+
+    O fatorial de um número n (representado por n!) é o produto de todos os inteiros positivos de 1 até n.
+    
+    🔹 Exemplo: 5! = 5 × 4 × 3 × 2 × 1 = 120
+
 - [Fibonacci Sequence](./Solutions/FibonacciSequence.cs): A sequência de Fibonacci é uma série de números onde cada termo é a soma dos dois anteriores, muito usada em algoritmos de otimização e modelagem matemática. Fórmula:
 
         F(n)=F(n−1)+F(n−2)
@@ -77,11 +83,15 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
 
         🚀 Resumindo: LinkedList é uma estrutura flexível para manipulação eficiente de dados, mas com acesso sequencial mais lento que um array.
 
-- [Word Search](./Solutions/WordSearch.cs): é um problema do LeetCode onde, dada uma matriz de caracteres e uma palavra, você deve verificar se a palavra pode ser formada seguindo caminhos adjacentes (cima, baixo, esquerda, direita) sem reutilizar a mesma célula.
-    - 🔹 Abordagem comum:
-        - ✅ Backtracking + DFS (Depth-First Search) → Explora todas as possibilidades recursivamente.
-        - ✅ Marca células visitadas temporariamente para evitar repetições.
-        - ✅ Complexidade: O(m * n * 4^L), onde m = linhas, n = colunas, L = comprimento da palavra.
+- [Pivotal Index](./Solutions/PivoxIndex.cs) Pivot Index do LeetCode é um problema onde você precisa encontrar o índice em um array onde a soma dos elementos à esquerda seja igual à soma dos elementos à direita.
+
+    🔹 Exemplo de entrada:
+
+        nums = [1, 7, 3, 6, 5, 6]
+    
+    🔹 Saída:
+    
+        3 (pois 1 + 7 + 3 = 11 e 5 + 6 = 11)
 
 - [Two Sum](./Solutions/TwoSum.cs): é um problema clássico do LeetCode onde, dado um array de inteiros e um alvo (`target`), o objetivo é encontrar os índices de dois números no array cuja soma seja igual ao alvo.
 
@@ -98,3 +108,9 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
     - 🔹 Complexidade:  
         ✅ Tempo: O(n)  
         ✅ Espaço: O(n)
+
+- [Word Search](./Solutions/WordSearch.cs): é um problema do LeetCode onde, dada uma matriz de caracteres e uma palavra, você deve verificar se a palavra pode ser formada seguindo caminhos adjacentes (cima, baixo, esquerda, direita) sem reutilizar a mesma célula.
+    - 🔹 Abordagem comum:
+        - ✅ Backtracking + DFS (Depth-First Search) → Explora todas as possibilidades recursivamente.
+        - ✅ Marca células visitadas temporariamente para evitar repetições.
+        - ✅ Complexidade: O(m * n * 4^L), onde m = linhas, n = colunas, L = comprimento da palavra.

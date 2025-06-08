@@ -28,3 +28,11 @@ WordSearchSolution.ShowSolution();
 ConsoleUtils.DivideSolution();
 
 TwoSumSequence.ShowSolution();
+
+ConsoleUtils.DivideSolution();
+
+PivoxIndexSequence.ShowSolution();
+
+ConsoleUtils.DivideSolution();
+
+Fatorial.ShowSolution("4");
