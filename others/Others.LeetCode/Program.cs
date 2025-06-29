@@ -36,3 +36,7 @@ PivoxIndexSequence.ShowSolution();
 ConsoleUtils.DivideSolution();
 
 Fatorial.ShowSolution("4");
+
+ConsoleUtils.DivideSolution();
+
+ReverseInteger.ShowSolution();

@@ -83,7 +83,7 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
 
         🚀 Resumindo: LinkedList é uma estrutura flexível para manipulação eficiente de dados, mas com acesso sequencial mais lento que um array.
 
-- [Pivotal Index](./Solutions/PivoxIndex.cs) Pivot Index do LeetCode é um problema onde você precisa encontrar o índice em um array onde a soma dos elementos à esquerda seja igual à soma dos elementos à direita.
+- [Pivotal Index](./Solutions/PivoxIndex.cs): Pivot Index do LeetCode é um problema onde você precisa encontrar o índice em um array onde a soma dos elementos à esquerda seja igual à soma dos elementos à direita.
 
     🔹 Exemplo de entrada:
 
@@ -92,6 +92,12 @@ O [*LeetCode*](https://leetcode.com/) é uma plataforma online de *coding challe
     🔹 Saída:
     
         3 (pois 1 + 7 + 3 = 11 e 5 + 6 = 11)
+
+- [Reverse Integer](./Solutions/ReverseInteger.cs): O problema Reverse Integer do LeetCode (geralmente identificado como “Reverse Integer” ou “Inverter Número”) consiste em inverter os dígitos de um número inteiro.
+
+    🔹 Exemplo de entrada e saída:
+        Entrada: x = 123 → Saída: 321
+        Entrada: x = -456 → Saída: -654
 
 - [Two Sum](./Solutions/TwoSum.cs): é um problema clássico do LeetCode onde, dado um array de inteiros e um alvo (`target`), o objetivo é encontrar os índices de dois números no array cuja soma seja igual ao alvo.
 
